@@ -1,0 +1,19 @@
+{
+   "name": "课堂派下载PPT插件",
+   "version": "1.0",
+   "manifest_version": 2,
+   "description": "作者: JamesHoi",
+   "browser_action": 
+   {
+      "default_title": "课堂派下载PPT插件"
+   },
+   "content_scripts": [
+      {
+        "matches": ["https://*.ketangpai.com/*"],
+        "run_at": "document_start",
+        "js": ["inject.js"]
+      }
+   ],
+   "permissions": [ "activeTab","tabs", "webRequest", "webRequestBlocking", "storage","*ketangpai.com/*"],
+   "web_accessible_resources": ["js/*"]
+}
